@@ -1,0 +1,56 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="search-container">
+
+      
+      <label for="game-search">Jogo</label>
+        <input type="text" id="game-search" placeholder="Digite o nome do jogo" 
+          onkeyup="filterGames(this.value)" onfocus="showGameList()" onblur="hideGameList()">
+        <div id="lista-jogos"></div>
+      
+        <label for="resolution-search">Resolução</label>
+        <select id="resolution-search" onchange="updateResolution()">
+          <option value="">Selecione a resolução</option>
+          <option value="720p">720p HD</option>
+          <option value="1080p">1080p Full HD</option>
+          <option value="1440p">1440p (2K)</option>
+          <option value="2160p">2160p (4K)</option>
+        </select>
+
+        <label for="graphic-quality-search">Qualidade Gráfica</label>
+        <select id="graphic-quality-search" onchange="updateGraphicQuality()">
+          <option value="">Selecione a qualidade gráfica</option>
+          <option value="Low">Baixa</option>
+          <option value="Medium">Média</option>
+          <option value="High">Alta</option>
+          <option value="Ultra">Ultra</option>
+        </select>
+
+        <label for="frame-rate-search">Taxa de Frames</label>
+        <select id="frame-rate-search" onchange="updateFrameRate()">
+          <option value="">Selecione a taxa de frames</option>
+          <option value="30">30 FPS</option>
+          <option value="60">60 FPS</option>
+          <option value="120">120 FPS</option>
+          <option value="144">144 FPS</option>
+          <option value="240">240 FPS</option>
+        </select>
+      
+        <button id="search-button" onclick="performSearch()">Pesquisar</button>
+
+        <div id="combinations-container"></div>
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
+
