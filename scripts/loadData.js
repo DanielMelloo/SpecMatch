@@ -53,4 +53,3 @@
 //   readExcelFile('./dataBases/dataBase-videoCard.xlsx').then(dadosGPUs => {
 //     console.log(dadosGPUs);
 //   });
-  

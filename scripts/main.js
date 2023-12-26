@@ -375,37 +375,37 @@ function nonePotentialCombinations() {
 }
 
 function displayPotentialCombinations(potencialCombinations) {
-    resetTable()
-    const container = document.getElementById('combinations-container')
-    if (!potencialCombinations || potencialCombinations.length === 0) {
-        container.innerHTML = '<p>Nenhuma combinação encontrada.</p>'
-        return
+    const container = document.getElementById('combinations-container');
+    resetTable(); // Clears any existing content
+
+    // Check if potencialCombinations is an array and is not empty
+    if (Array.isArray(potencialCombinations) && potencialCombinations.length > 0) {
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        ['CPU', 'Placa de Vídeo'].forEach(header => {
+            const th = document.createElement('th');
+            th.textContent = header;
+            headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        const tbody = document.createElement('tbody');
+        potencialCombinations.forEach(combination => {
+            const row = document.createElement('tr');
+            Object.values(combination).forEach(text => {
+                const td = document.createElement('td');
+                td.textContent = text;
+                row.appendChild(td);
+            });
+            tbody.appendChild(row);
+        });
+        table.appendChild(tbody);
+
+        container.appendChild(table); // Add the table to the container
+    } else {
+        // Handle case where no combinations are found or potencialCombinations is not an array
+        container.innerHTML = '<p>Nenhuma combinação compatível encontrada.</p>';
     }
-
-    const table = document.createElement('table')
-    const thead = document.createElement('thead')
-    const headerRow = document.createElement('tr')
-    ['CPU', 'Placa de Vídeo'].forEach(header => {
-        const th = document.createElement('th')
-        th.textContent = header
-        headerRow.appendChild(th)
-    })
-    thead.appendChild(headerRow)
-    table.appendChild(thead)
-
-    const tbody = document.createElement('tbody')
-    potencialCombinations.forEach(combination => {
-        const row = document.createElement('tr')
-        Object.values(combination).forEach(text => {
-            const td = document.createElement('td')
-            td.textContent = text
-            row.appendChild(td)
-        })
-        tbody.appendChild(row)
-    })
-    table.appendChild(tbody)
-
-    container.innerHTML = '' // Limpar conteúdo anterior
-    
-    container.appendChild(table) // Adicionar a tabela ao container
 }
