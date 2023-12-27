@@ -1,0 +1,19 @@
+Release title
+SpecMatch v1.0.0
+
+Descrição do lançamento
+Estamos entusiasmados em anunciar a primeira versão oficial do SpecMatch, a ferramenta que revoluciona a maneira como você combina hardware para jogos. Esta versão representa o culminar de meses de desenvolvimento árduo e testes extensivos.
+
+Novidades:
+Interface de usuário completamente redesenhada para uma experiência mais intuitiva.
+Melhorias significativas no algoritmo de satisfação de restrições para fornecer recomendações mais precisas.
+Expansão das bases de dados para incluir as mais recentes CPUs e GPUs no mercado.
+Implementação de um novo sistema de feedback para que possamos continuar melhorando o SpecMatch com suas sugestões.
+Correções:
+Resolvidos problemas com a compatibilidade entre diferentes navegadores.
+Corrigidos bugs menores reportados pelos usuários durante a fase beta.
+Como usar:
+Para começar a utilizar o SpecMatch, visite nosso site, escolha o jogo e as especificações de desempenho desejadas, e deixe que nossa ferramenta encontre as melhores combinações de hardware para você.
+
+Agradecemos a todos que contribuíram com seu tempo e feedback para tornar o SpecMatch melhor. Continuem jogando e otimizando suas máquinas com o SpecMatch!
+
